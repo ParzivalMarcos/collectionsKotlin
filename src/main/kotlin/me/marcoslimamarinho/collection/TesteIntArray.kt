@@ -3,7 +3,8 @@ package me.marcoslimamarinho.collection
 const val SEPARADOR = "-----------------------"
 fun main() {
     //arrayInt()
-    arrayIntOf()
+    //arrayIntOf()
+    arrayString()
 }
 
 fun arrayInt(){
@@ -57,4 +58,23 @@ fun arrayIntOf(){
 
 }
 
+fun arrayString(){
+    val nomes = Array(3){""}
+    nomes[0] = "Maria"
+    nomes[1] = "Marcos"
+    nomes[2] = "Ideltudes"
 
+    for (nome in nomes) {
+        println(nome)
+    }
+
+    println(SEPARADOR)
+    nomes.sort()
+    nomes.forEach { println(it) }
+
+    println(SEPARADOR)
+
+    val nomes2 = arrayOf("Peter", "Zack", "Mary")  // Declarando o tipo e quantidade ja infere
+    nomes2.sort()
+    nomes2.forEach { println(it) }
+}
